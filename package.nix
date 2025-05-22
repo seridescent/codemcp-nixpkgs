@@ -5,7 +5,7 @@
 let
   agno = python3Packages.buildPythonPackage rec {
     pname = "agno";
-    version = "1.5.3"; # Check PyPI for latest version
+    version = "1.5.3";
     pyproject = true;
 
     src = python3Packages.fetchPypi {
@@ -31,8 +31,6 @@ let
       typer
       typing-extensions
     ];
-
-    doCheck = false; # Skip tests for now
 
     meta = {
       description = "a lightweight, high-performance library for building Agents";
